@@ -17,6 +17,9 @@ second elements representing hours and minutes, respectively.
 4. Convert the remaining time back into hours and minutes. <br>
 5. Return the result as an array. <br>
 
+### codes in index.js
+
+
 <hr>
 
 # question 3 :-
@@ -24,7 +27,8 @@ How many ways to convert an Object {} into an Array [] and Array [] to Object{} 
 JavaScript ?
 
 # ans:-
- * if i want  convert Object {} into an Array [] i can use three method :-
+ * if i want  convert Object {} into an Array [] i can use three method :- <br>
+ 
  1. Object.keys()
  const person = {
     firstName: 'John',
@@ -32,7 +36,7 @@ JavaScript ?
 };
 const propertyNames = Object.keys(person);
 console.log(propertyNames);
-
+  <br>
  2. Object.entries() 
   const myObject = {
   key1: value1,
@@ -42,7 +46,7 @@ console.log(propertyNames);
 const myArray = Object.entries(myObject);
 console.log(myArray)
 
-
+<br>
  3. Using Object.keys() and Array.map() method:
  const myObject = {
   key1: value1,
@@ -55,7 +59,8 @@ console.log(myArray);
 
  <hr>
  
-* if i want convert Array [] to Object{} 
+* if i want convert Array [] to Object{}  then  <br>
+
  1. Using a for loop
  function arrayToObject(arr) {
   const obj = {};
@@ -64,7 +69,8 @@ console.log(myArray);
   }
   return obj;
 }
-
+ <br>
+ 
 2. Using Array reduce() method
 function arrayToObject(arr) {
   return arr.reduce((obj, currentVal, index) => {
@@ -73,14 +79,14 @@ function arrayToObject(arr) {
   }, {});
 }
 
-
+<br>
 3. Using Object.assign() with Spread Operator
 
 function arrayToObject(arr) {
   return Object.assign({}, ...arr.map((val, index) => ({ [index]: val })));
 }
 
-
+ <br>
 4. Using Object.keys() and Array forEach():
 function arrayToObject(arr) {
   const obj = {};
