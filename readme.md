@@ -29,30 +29,28 @@ JavaScript ?
 # ans:-
  * if i want  convert Object {} into an Array [] i can use three method :- <br>
  
- 1. Object.keys()
+ 1. Object.keys():-<br>
  const person = {
     firstName: 'John',
     lastName: 'Doe'
 };
 const propertyNames = Object.keys(person);
 console.log(propertyNames);
-  <br>
- 2. Object.entries() 
-  const myObject = {
-  key1: value1,
-  key2: value2,
-};
 
-const myArray = Object.entries(myObject);
-console.log(myArray)
 
-<br>
- 3. Using Object.keys() and Array.map() method:
+ 3. Object.entries() :- <br>
  const myObject = {
   key1: value1,
   key2: value2,
 };
+const myArray = Object.entries(myObject);
+console.log(myArray)
 
+3. Using Object.keys() and Array.map() method:-<br>
+ const myObject = {
+  key1: value1,
+  key2: value2,
+};
 const myArray = Object.keys(myObject).map(key => myObject[key]);
 console.log(myArray);
 
@@ -61,7 +59,7 @@ console.log(myArray);
  
 * if i want convert Array [] to Object{}  then  <br>
 
- 1. Using a for loop
+ 1. Using a for loop:- <br>
  function arrayToObject(arr) {
   const obj = {};
   for (let i = 0; i < arr.length; i++) {
@@ -71,7 +69,7 @@ console.log(myArray);
 }
  <br>
  
-2. Using Array reduce() method
+3. Using Array reduce() method:- <br>
 function arrayToObject(arr) {
   return arr.reduce((obj, currentVal, index) => {
     obj[index] = currentVal;
@@ -80,14 +78,13 @@ function arrayToObject(arr) {
 }
 
 <br>
-3. Using Object.assign() with Spread Operator
 
+3. Using Object.assign() with Spread Operator:-<br>
 function arrayToObject(arr) {
   return Object.assign({}, ...arr.map((val, index) => ({ [index]: val })));
 }
 
- <br>
-4. Using Object.keys() and Array forEach():
+4. Using Object.keys() and Array forEach():-<br>
 function arrayToObject(arr) {
   const obj = {};
   Object.keys(arr).forEach((key, index) => {
